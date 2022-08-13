@@ -84,7 +84,7 @@ nav a.router-link-exact-active
 .header-name-container
 {
   display: flex;
-  gap:250px;
+  gap: 250px;
 }
 
 .header-name-text

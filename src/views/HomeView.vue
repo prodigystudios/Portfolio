@@ -18,7 +18,6 @@
         <router-link to="/projects">Klicka här för att direkt se mina projekt!</router-link>
       </h3>
       <div class="empty">
-
       </div>
       <carousel @next="next" @prev="prev" @stop="stop" @resume="resume" class="carousel" :projectTitle="projectTitle">
         <carousel-slide v-for="(slide, index) in slides" :key="slide" :index="index" :visableSlide="visableSlide"
@@ -186,7 +185,6 @@ h3
   gap: 200px;
   row-gap: 0;
 }
-
 
 .carousel
 {

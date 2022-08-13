@@ -70,9 +70,11 @@ export default {
 .btn-container
 {
     display: flex;
+    width: fit-content;
     justify-content: center;
     gap: 50px;
     margin-top: 15px;
+    margin-left: 40%;
 }
 
 button
