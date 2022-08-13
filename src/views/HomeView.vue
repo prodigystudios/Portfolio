@@ -260,6 +260,7 @@ h3
 .head-container
 {
   display: flex;
+  width: 100%;
   flex-direction: column;
   row-gap: 0;
 }
@@ -272,10 +273,10 @@ h3
 .mid-container
 {
   display: flex;
-  width: 480px;
+  width: 100%;
   margin-bottom: 20px;
   margin-top: 20px;
-  gap: 10px;
+  gap: 14px;
 }
 
 .content-align

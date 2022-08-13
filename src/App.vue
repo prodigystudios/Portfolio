@@ -197,7 +197,14 @@ p
    display: none;
   }
   header {
+    margin:0;
+    padding:0;
+    width: 100;
+  }
+  .header-name-container {
     width: 100%;
+    margin:0;
+    padding:0;
   }
 }
 </style>
