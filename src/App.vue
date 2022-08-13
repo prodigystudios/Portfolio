@@ -178,4 +178,26 @@ p
   margin: 5px;
 }
 
+
+@media (max-width: 480px)
+{
+  html {
+    overflow-y: scroll;
+     
+  }
+  #app
+  {
+    font-family: monospace;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: white;
+    margin:auto;
+  }
+  nav {
+   display: none;
+  }
+  header {
+    width: 100%;
+  }
+}
 </style>

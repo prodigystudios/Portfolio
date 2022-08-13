@@ -22,7 +22,7 @@
       <carousel @next="next" @prev="prev" @stop="stop" @resume="resume" class="carousel" :projectTitle="projectTitle">
         <carousel-slide v-for="(slide, index) in slides" :key="slide" :index="index" :visableSlide="visableSlide"
           :direction="direction">
-          <router-link :to="'projects/' + slide.id"><img  :src="slide.img" alt=""/></router-link>
+          <router-link :to="'projects/' + slide.id"><img :src="slide.img" alt="" /></router-link>
         </carousel-slide>
       </carousel>
     </div>
@@ -98,7 +98,7 @@ export default {
           img: require("@/assets/testTodo.png"),
         },
         {
-          id:1,
+          id: 1,
           imageName: "En random bild bara",
           img: require("@/assets/MainPagePicture.jpg"),
         },
@@ -226,11 +226,6 @@ h3
   box-shadow: 1px 2px black;
 }
 
-.headshot-image
-{
-  border-radius: 10px;
-}
-
 .divider
 {
   margin-top: 50px;
@@ -243,7 +238,7 @@ h3
 .mid-container
 {
   display: flex;
-  margin-bottom:20px;
+  margin-bottom: 20px;
   margin-top: 20px;
   gap: 380px;
 }
@@ -254,4 +249,43 @@ h3
   gap: 10px;
   align-items: center;
 }
+
+@media (max-width: 480px)
+{
+
+.main
+{
+  margin-top: 0em;
+}
+.head-container
+{
+  display: flex;
+  flex-direction: column;
+  row-gap: 0;
+}
+.head-text-container
+{
+  grid-area: headtext;
+  width: 100%;
+}
+
+.mid-container
+{
+  display: flex;
+  width: 480px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.content-align
+{
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+}
+
+
 </style>

@@ -105,4 +105,13 @@ button:hover
   opacity: 0;
 }
 
+@media (max-width: 480px) {
+    .carousel {
+     display:none;   
+    }
+    button {
+        display:none;
+    }
+}
+
 </style>
