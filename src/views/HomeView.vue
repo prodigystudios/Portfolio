@@ -155,7 +155,6 @@ export default {
 <style scoped>
 p
 {
-  color: black;
   font-size: 14.5px;
 }
 

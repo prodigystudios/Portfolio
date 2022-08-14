@@ -95,7 +95,7 @@ export default {
 .content-align:hover
 {
     outline: rgba(135, 206, 250, 0.7) solid 5px;
-    ;
+    
 }
 
 .content-align a

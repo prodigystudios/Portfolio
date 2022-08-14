@@ -64,15 +64,16 @@ header
 nav
 {
   display: flex;
+  margin-right: 20px;
+  justify-content: center;
   align-items: center;
-  text-align: right;
   font-size: 18px;
   width: 100%;
 }
 
 nav a
 {
-  padding-left: 50px;
+  margin:0px 20px;
   color: black;
 }
 
@@ -90,8 +91,6 @@ nav a.router-link-exact-active
 .header-name-container
 {
   display: flex;
-  gap: 250px;
-  width: 100%;
 }
 
 .header-name-text
@@ -105,6 +104,9 @@ nav a.router-link-exact-active
 
 .header-logo
 {
+  margin-top:10px;
+  padding-bottom:10px;
+  margin-left:5px;
   width: 200px;
   height: 40px;
 }
@@ -127,7 +129,7 @@ a:hover
   margin-top: 10px;
   background: #f2f2f2;
   height: fit-content;
-  color: black;
+
   border-radius: 5px;
   text-align: left;
   box-shadow: 1px 1px 4px 2px;
