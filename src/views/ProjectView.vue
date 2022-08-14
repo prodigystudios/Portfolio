@@ -1,27 +1,23 @@
 <template>
-    <h1 class ="center">Mina projekt!</h1>
+    <h1 class="center">Mina projekt!</h1>
     <div class="main-container">
         <div v-for="project in projects" :key="project.id">
             <div class="content-align">
-                <router-link @click="getValuesById(project.id)"  :to="'project/' + project.id"><h2>{{ project.projectName }}</h2>
-                <img class="img-scale" :src="project.img" :alt="project.projectName">
-                <div class="spacing">
-                <h3>{{ project.projectDescription }}</h3>
-                </div></router-link>
-                <project-info :projectTitle="project.projectName"></project-info>
+                <router-link :to="'project/' + project.id">
+                    <h2>{{ project.projectName }}</h2>
+                    <img class="img-scale" :src="project.img" :alt="project.projectName">
+                    <div class="spacing">
+                        <h3>{{ project.projectDescription }}</h3>
+                    </div>
+                </router-link>
             </div>
-            
         </div>
     </div>
 </template>
 
 
 <script>
-import ProjectInfo from '@/components/ProjectInfo.vue';
 export default {
-    components: {
-        ProjectInfo
-    },
     data() {
         return {
             projects: [
@@ -62,22 +58,17 @@ export default {
                     img: require("@/assets/testTodo.png")
                 },
             ],
-            projectTitle: 'hey',
-            temp_projectDescription: "",
         }
     },
-    methods: {
-        getValuesById(id) {
-            
-        }
-    }
 }
 </script>
 
 <style scoped>
-.center {
+.center
+{
     text-align: center;
 }
+
 .main-container
 {
     display: flex;
@@ -85,7 +76,7 @@ export default {
     gap: 80px;
     row-gap: 10px;
     width: 100%;
-    margin-bottom:20px;
+    margin-bottom: 20px;
 }
 
 .content-align
@@ -97,20 +88,29 @@ export default {
     border-radius: 10px;
     height: 500px;
     width: 300px;
-    gap:50px;
-    padding:0px 20px;
-}
-.content-align:hover {
-    outline:  rgba(135, 206, 250, 0.7) solid 5px;;    
+    gap: 50px;
+    padding: 0px 20px;
 }
 
-.content-align a {
-    color: black;
+.content-align:hover
+{
+    outline: rgba(135, 206, 250, 0.7) solid 5px;
+    ;
 }
-.content-align a:hover {
+
+.content-align a
+{
+    color: black;
+    width:100%
+}
+
+.content-align a:hover
+{
     color: rgba(135, 206, 250, 0.7);
 }
-.img-scale {
+
+.img-scale
+{
     width: 100%;
     height: 100%;
 }

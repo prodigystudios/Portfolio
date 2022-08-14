@@ -86,12 +86,6 @@ export default {
   data() {
     return {
       slides: [
-        //När du fixat bilderna så använder du {img: require('@/assets/MainPagePicture.jpg')} och ändrar html taggen till slides.img istället så funkar de ! :)
-        // "https://picsum.photos/id/237/400/350",
-        // "https://picsum.photos/id/236/400/350",
-        // "https://picsum.photos/id/235/400/350",
-        // "https://picsum.photos/id/234/400/350",
-        //"https://picsum.photos/id/233/400/350",
         {
           id: 0,
           imageName: "Att göra app",

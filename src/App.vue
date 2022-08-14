@@ -234,7 +234,7 @@ p
     font-family: monospace;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    color: white;
+    color: black;
     margin: auto;
   }
 
@@ -277,7 +277,7 @@ p
     font-family: monospace;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    color: white;
+    color: black;
     margin: auto;
   }
 
