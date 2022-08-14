@@ -250,43 +250,136 @@ h3
   align-items: center;
 }
 
+@media screen and (max-width:4000px) and (min-width: 2880px)
+{
+  p {
+    font-size: 30px;
+  }
+  h3 {
+    font-size: 50px;
+  }
+  .head-text-container a {
+    font-size: 30px;
+  }
+  .main
+  {
+    margin: 60px 0px;
+  }
+
+  .head-container
+  {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.3fr 0.3fr;
+    grid-template-areas: "headtext carousel"
+    "empty btn-container";
+    gap: 500px;
+    row-gap: 0;
+  }
+
+  .head-text-container
+  {
+    grid-area: headtext;
+    width: 100%;
+    margin-top: 15px;
+    font-size: 11ch;
+  }
+
+  .mid-container
+  {
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    gap: 850px;
+    font-size: 6ch;
+  }
+
+  .content-align
+  {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    
+  }
+}
+
+@media screen and (max-width:768px) and (min-width: 480px)
+{
+
+  .main
+  {
+    margin: 0;
+  }
+
+  .head-container
+  {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .head-text-container
+  {
+    grid-area: headtext;
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  .mid-container
+  {
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    gap: 150px;
+  }
+
+  .content-align
+  {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+  }
+
+}
+
 @media (max-width: 480px)
 {
 
-.main
-{
-  margin-top: 0em;
-}
-.head-container
-{
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  row-gap: 0;
-}
-.head-text-container
-{
-  grid-area: headtext;
-  width: 100%;
-}
+  .main
+  {
+    margin-top: 0em;
+  }
 
-.mid-container
-{
-  display: flex;
-  width: 100%;
-  margin-bottom: 20px;
-  margin-top: 20px;
-  gap: 14px;
+  .head-container
+  {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    row-gap: 0;
+  }
+
+  .head-text-container
+  {
+    grid-area: headtext;
+    width: 100%;
+  }
+
+  .mid-container
+  {
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    gap: 14px;
+  }
+
+  .content-align
+  {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+  }
+
 }
-
-.content-align
-{
-  display: flex;
-  gap: 5px;
-  align-items: center;
-}
-
-}
-
-
 </style>

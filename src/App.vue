@@ -2,7 +2,7 @@
   <header class="header">
     <div class="header-name-container">
       <router-link to="/">
-        <img src='./assets/headerLogo.png' width="200" height="40" alt="logo">
+        <img class="header-logo" src='./assets/headerLogo.png' alt="logo">
       </router-link>
       <nav>
         <router-link to="/">Hem</router-link>
@@ -56,12 +56,18 @@ body
   background: white;
 }
 
+header
+{
+  width: 100%;
+}
+
 nav
 {
   display: flex;
   align-items: center;
   text-align: right;
   font-size: 18px;
+  width: 100%;
 }
 
 nav a
@@ -79,12 +85,14 @@ nav a.router-link-exact-active
 {
   box-shadow: 1px 1px 6px 1px black;
   padding: 5px;
+  width: 100%;
 }
 
 .header-name-container
 {
   display: flex;
   gap: 250px;
+  width: 100%;
 }
 
 .header-name-text
@@ -93,6 +101,13 @@ nav a.router-link-exact-active
   font-weight: normal;
   font-family: monospace;
   font-size: x-large;
+  width: 100%;
+}
+
+.header-logo
+{
+  width: 200px;
+  height: 40px;
 }
 
 a
@@ -178,33 +193,121 @@ p
   margin: 5px;
 }
 
-
-@media (max-width: 480px)
+@media screen and (max-width:4000px) and (min-width: 2880px)
 {
-  html {
-    overflow-y: scroll;
-     
+  .footer-content p {
+    font-size: 30px;
   }
+  .footer-content h2 {
+    font-size: 35px;
+  }
+  .links a {
+    font-size: 30px;
+  }
+
+  nav
+  {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    font-size: 30px;
+  }
+
+  .header
+  {
+    box-shadow: 1px 1px 6px 1px black;
+    padding: 5px;
+    width: 100%;
+    height: 65px;
+  }
+
+  .header-name-container
+  {
+    width: 100%;
+    display: flex;
+    gap: 1000px;
+
+  }
+
+  .header-logo
+  {
+    width: 200px;
+    height: 70px;
+  }
+}
+
+@media screen and (max-width:768px) and (min-width: 500px)
+{
   #app
   {
     font-family: monospace;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: white;
-    margin:auto;
+    margin: auto;
   }
-  nav {
-   display: none;
+
+  nav
+  {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
   }
-  header {
-    margin:0;
-    padding:0;
+
+
+  .header
+  {
+    box-shadow: 1px 1px 6px 1px black;
+    padding: 5px;
+  }
+
+  .header-name-container
+  {
+    display: flex;
+    gap: 40px;
+  }
+
+  .header-name-text
+  {
+    margin: 0;
+    font-weight: normal;
+    font-family: monospace;
+    font-size: x-large;
+  }
+
+}
+
+@media (max-width: 480px)
+{
+
+  #app
+  {
+    font-family: monospace;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: white;
+    margin: auto;
+  }
+
+  nav
+  {
+    display: none;
+  }
+
+  header
+  {
+    margin: 0;
+    padding: 0;
     width: 100;
   }
-  .header-name-container {
+
+  .header-name-container
+  {
     width: 100%;
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
   }
 }
 </style>

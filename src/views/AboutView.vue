@@ -33,9 +33,7 @@ a {
   border: 1px solid black;
   border-radius: 10px;
 }
-.head-text {
- 
-}
+
 .head-container {
   margin:0px 250px;
   line-height: 25px;
