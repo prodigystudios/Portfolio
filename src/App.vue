@@ -47,7 +47,7 @@ html
   font-family: monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: white;
+  color: black;
   margin: 20px 350px;
 }
 
@@ -84,7 +84,6 @@ nav a.router-link-exact-active
 .header
 {
   box-shadow: 1px 1px 6px 1px black;
-  padding: 5px;
   width: 100%;
 }
 
@@ -120,15 +119,6 @@ a:hover
   color: rgba(135, 206, 250, 0.7)
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6
-{
-  color: black;
-}
 
 .footer-container
 {

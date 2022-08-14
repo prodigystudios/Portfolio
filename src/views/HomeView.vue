@@ -22,7 +22,7 @@
       <carousel @next="next" @prev="prev" @stop="stop" @resume="resume" class="carousel" :projectTitle="projectTitle">
         <carousel-slide v-for="(slide, index) in slides" :key="slide" :index="index" :visableSlide="visableSlide"
           :direction="direction">
-          <router-link :to="'projects/' + slide.id"><img :src="slide.img" alt="" /></router-link>
+          <router-link :to="'project/' + slide.id"><img :src="slide.img" alt="" /></router-link>
         </carousel-slide>
       </carousel>
     </div>
