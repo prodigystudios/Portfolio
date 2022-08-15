@@ -4,29 +4,23 @@
             <div class="container" v-if="tempId == project.id">
                 <h1>{{ project.projectName }}</h1>
                 <p>{{ project.projectDescription }}</p>
+
                 <transition name="fade">
-                <section v-if="!project.isClicked" class="aling-images">
-                    <div class="images-container" v-for="(image, i) in images" :key="i">
-                        <div>
-                            <img @click="project.isClicked = true" class="image-scale" :src="image.img">
+                    <div v-if="tempId == project.id" class="show_image_popup">
+                        <div class="image-show-area">
+                            <img class="large-image" :src="currentImage" alt=""> <!--     popup imge -->
                         </div>
-                        <p>{{ image.indepthDescription }}</p>
                     </div>
-                </section>
+                </transition>
+
+                <transition name="fade">
+                    <section class="aling-images">
+                        <div class="images-container" v-for="(image, i) in images" :key="i">
+                            <img @click="selectedImage(i)" class="image-scale" :src="image.img">
+                        </div>
+                    </section>
                 </transition>
             </div>
-
-            <transition name="fade">
-                <div v-if="project.isClicked" id="show_image_popup">
-                    <div id="image-show-area">
-                        <img id="large-image" :src="project.img" alt=""> <!--     popup imge -->
-                    </div>
-                    <div class="close-btn-area">
-                        <button @click="project.isClicked = false" class="close-btn">Stäng</button>
-                        <!--     close btn -->
-                    </div>
-                </div>
-            </transition>
         </div>
     </div>
 </template>
@@ -50,10 +44,10 @@ export default {
                                 'Du kan stryka över avslutade uppgfiter ur listan och klicka på x för att ta bort vald uppgift. Eller ta bort allting'
                         },
                         {
-                            img: require("@/assets/testTodo.png")
+                            img: require("@/assets/TodoImages/CodeApiCalls.png")
                         },
                         {
-                            img: require("@/assets/testTodo.png")
+                            img: require("@/assets/TodoImages/CodeInputSave.png")
                         },
                     ]
                 },
@@ -153,11 +147,13 @@ export default {
                     ]
                 },
             ],
-            tempId: 0
+            tempId: 0,
+            currentImage: ''
         }
     },
     created() {
         this.tempId = this.$route.params.id
+        this.currentImage = this.projects[this.tempId].images[0].img
     },
     computed: {
         images: function () {
@@ -166,6 +162,11 @@ export default {
                 images.push(this.projects[this.tempId].images[i])
             }
             return images
+        },
+    },
+    methods: {
+        selectedImage(id) {
+            this.currentImage = this.projects[this.tempId].images[id].img
         }
     }
 }
@@ -180,20 +181,22 @@ export default {
 .aling-images
 {
     display: flex;
-    gap: 29px;
-}
-
-.image-scale
-{
-    width: 375px;
-    height: 400px;
+    gap: 10px;
 }
 
 .images-container
 {
+    
     height: fit-content;
     border: 1px solid black;
     border-radius: 5px;
+}
+
+.image-scale
+{
+    object-fit: contain;
+    width: 100px;
+    height: 100px;
 }
 
 .images-container:hover
@@ -202,26 +205,16 @@ export default {
     cursor: pointer;
 }
 
-#show_image_popup img
+.show_image_popup img
 {
     max-width: 90%;
-    height: auto;
+    max-height: 50%;
 }
 
-.close-btn
-{
-    width: 100%;
-    height: 40px;
-    background: rgba(135, 206, 250, 0.7);
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-}
+.large-image {
 
-.close-btn:hover
-{
-    opacity: 0.9;
-    outline: 1px solid black;
+    width:800px;
+    height: 600px;  
 }
 
 .fade-enter-active
@@ -239,5 +232,4 @@ export default {
 {
     opacity: 0;
 }
-
 </style>
