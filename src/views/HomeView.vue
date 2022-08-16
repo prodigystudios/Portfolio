@@ -231,9 +231,10 @@ h3
 .mid-container
 {
   display: flex;
+  width: 100%;
   margin-bottom: 20px;
   margin-top: 20px;
-  gap: 380px;
+  gap: 430px;
 }
 
 .content-align
