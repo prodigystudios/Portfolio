@@ -48,7 +48,7 @@ html
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: black;
-  margin: 20px 350px;
+  margin: 20px 300px;
 }
 
 body
