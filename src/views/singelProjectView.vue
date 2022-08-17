@@ -10,7 +10,7 @@
                         <div class="image-show-area">
                             <img class="large-image" :src="currentSelectedImage" alt="">
                             <div class="align-text">
-                                 <h3>{{ currentSelectedImageInfo }}</h3>
+                                <h3>{{ currentSelectedImageInfo }}</h3>
                             </div>
                         </div>
                     </div>
@@ -55,20 +55,29 @@ export default {
                 },
                 {
                     id: 1,
-                    projectName: "b",
-                    projectDescription: "En att göra lista! Perfekt för dig som har många saker att inte glömma bort väldigt enkel att använda",
-                    img: require("@/assets/testTodo.png"),
+                    projectName: "Blogg app",
+                    projectDescription: "En enkel blogg sida där du kan skapa, redigera och ta bort inlägg",
                     images: [
                         {
-                            img: require("@/assets/testTodo.png"),
-                            indepthDescription: 'Det här är min frontend av att göra lista. Du kan lägga till saker att göra via input fältet ' +
-                                'Du kan stryka över avslutade uppgfiter ur listan och klicka på x för att ta bort vald uppgift. Eller ta bort allting'
+                            img: require("@/assets/Blogg/SizeTest.png"),
+                            indepthDescription: 'Här ser vi första sidan där alla inlägg kommer listas och även en knapp för att skapa nya inlägg'
                         },
                         {
-                            img: require("@/assets/testTodo.png")
+                            img: require("@/assets/Blogg/NewPostView.png"),
+                            indepthDescription: 'Här skapar vi ett nytt inlägg'
                         },
                         {
-                            img: require("@/assets/testTodo.png")
+                            img: require("@/assets/Blogg/ShowPostEdit.png"),
+                            indepthDescription: 'Här kan vi redigera eller ta bort inlägg'
+                        },
+                        {
+                            img: require("@/assets/Blogg/CodeSnipOne.png"),
+                            indepthDescription: 'CodeSnip: Här visas hur jag tar bort och redigerar inläggen o uppdaterar databasen'
+                        },
+                        {
+                            img: require("@/assets/Blogg/CodeSnipTwo.png"),
+                            indepthDescription: 'CodeSnip: Hämta alla inlägg från databasen'
+
                         },
                     ]
                 },
@@ -76,7 +85,7 @@ export default {
                     id: 2,
                     projectName: "c",
                     projectDescription: "En att göra lista! Perfekt för dig som har många saker att inte glömma bort väldigt enkel att använda",
-                    img: require("@/assets/testTodo.png"),
+
                     images: [
                         {
                             img: require("@/assets/testTodo.png"),
@@ -95,7 +104,7 @@ export default {
                     id: 3,
                     projectName: "Todo app",
                     projectDescription: "En att göra lista! Perfekt för dig som har många saker att inte glömma bort väldigt enkel att använda",
-                    img: require("@/assets/testTodo.png"),
+
                     images: [
                         {
                             img: require("@/assets/testTodo.png"),
@@ -114,7 +123,7 @@ export default {
                     id: 4,
                     projectName: "b",
                     projectDescription: "b",
-                    img: require("@/assets/testTodo.png"),
+
                     images: [
                         {
                             img: require("@/assets/testTodo.png"),
@@ -133,7 +142,7 @@ export default {
                     id: 5,
                     projectName: "c",
                     projectDescription: "c",
-                    img: require("@/assets/testTodo.png"),
+
                     images: [
                         {
                             img: require("@/assets/testTodo.png"),
@@ -190,8 +199,6 @@ export default {
     gap: 10px;
 }
 
-.align-text {
-}
 .images-container
 {
     width: 100px;
@@ -213,14 +220,15 @@ export default {
     cursor: pointer;
 }
 
-.show_image_popup {
+.show_image_popup
+{
     height: fit-content;
 }
 
 .show_image_popup img
 {
     width: 1280px;
-    height: 700px;
+    height: 500px;
     object-fit: contain;
     border: 2px solid black;
     margin: 10px 0px;

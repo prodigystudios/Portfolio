@@ -1,8 +1,8 @@
 <template>
     <h1 class="center">Mina projekt!</h1>
     <div class="main-container">
-        <div v-for="project in projects" :key="project.id">
-            <div class="content-align">
+        <div class="content-align" v-for="project in projects" :key="project.id">
+            <div>
                 <router-link :to="'project/' + project.id">
                     <h2>{{ project.projectName }}</h2>
                     <img class="img-scale" :src="project.img" :alt="project.projectName">
@@ -12,7 +12,6 @@
                             <img class="scale-icon" :src="icon.icon">
                         </div>
                     </div>
-
                 </router-link>
             </div>
         </div>
@@ -51,15 +50,24 @@ export default {
                 },
                 {
                     id: 1,
-                    projectName: "b",
-                    projectDescription: "En att göra lista! Perfekt för dig som har många saker att inte glömma bort väldigt enkel att använda",
-                    img: require("@/assets/testTodo.png"),
+                    projectName: "Blogg App",
+                    projectDescription: "En enkel blogg sida där du kan skapa, redigera och ta bort inlägg",
+                    img: require("@/assets/Blogg/SizeTest.png"),
                     icons: [
                         {
                             icon: require("@/assets/icons/icons8-html-5-32.png"),
                         },
                         {
-                            icon: require("@/assets/icons/icons8-html-5-32.png"),
+                            icon: require("@/assets/icons/icons8-css3-32.png"),
+                        },
+                        {
+                            icon: require("@/assets/icons/icons8-sql-32.png"),
+                        }, 
+                        {
+                            icon: require("@/assets/icons/icons8-c-sharp-logo-32.png"),
+                        },
+                        {
+                            icon: require("@/assets/logo.png"),
                         },
                     ]
                 },
@@ -105,7 +113,7 @@ export default {
                         },
                     ]
                 },
-                
+
             ],
         }
     },
@@ -118,6 +126,11 @@ export default {
 .center
 {
     text-align: center;
+}
+
+.sub
+{
+    position: relative;
 }
 
 .main-container
@@ -138,6 +151,11 @@ export default {
     text-align: center;
 }
 
+.content-align h3
+{
+    height: 90px;
+}
+
 .content-align:hover
 {
     outline: rgba(135, 206, 250, 0.7) solid 5px;
@@ -147,24 +165,30 @@ export default {
 {
     color: black;
 }
+
 .content-align a:hover
 {
     color: rgba(135, 206, 250, 0.7);
 }
 
+
 .icons-container
 {
     display: flex;
-    margin:10px 0px;
-    
+    justify-content: center;
+    height: 100%;
+    margin: 10px 0px;
 }
-.scale-icon {
-    width:32px;
+
+.scale-icon
+{
+    width: 32px;
 }
 
 .img-scale
 {
     width: 100%;
     height: 100%;
+    object-fit: contain;
 }
 </style>
