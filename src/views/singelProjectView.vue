@@ -37,18 +37,18 @@ export default {
                     images: [
                         {
                             img: require("@/assets/TodoImages/NewUppload/adobe/MainPage.png"),
-                            indepthDescription: 'Här ser du hur sidan ser ut med saker att göra i en lista, lägga till nya uppgifter genom att fylla i fältet'
+                            indepthDescription: 'Här ser du hur sidan ser ut med saker att göra i en lista, Du kan lägga till nya uppgifter genom att fylla i fältet'
                         },
                         {
                             img: require("@/assets/TodoImages/NewUppload/adobe/MainPageCompleted.png"),
-                            indepthDescription: "Frontend som visar när uppgifterna är klara!"
+                            indepthDescription: "Frontend som visar hur de ser ut när uppgifterna är klara!"
                         },
                         {
-                            img: require("@/assets/TodoImages/NewUppload/adobe/CodeApiCall.png"),
-                            indepthDescription: "Det här visar hur jag hanterar calls till min api för att hämta värdena ur min databas"
+                            img: require("@/assets/TodoImages/NewUppload/TodoGetFromApi.png"),
+                            indepthDescription: "Det här visar hur jag hanterar calls till min api för att hämta och ta bort värden ur min databas"
                         },
                         {
-                            img: require("@/assets/TodoImages/NewUppload/adobe/CodeApiAdd.png"),
+                            img: require("@/assets/TodoImages/NewUppload/TodoSaveCodeSnip.png"),
                             indepthDescription: "Det här visar hur jag hanterar calls till min databas för att spara nya värden"
                         },
                     ]
@@ -220,7 +220,8 @@ export default {
 .show_image_popup img
 {
     width: 1280px;
-    height: 600px;
+    height: 700px;
+    object-fit: contain;
     border: 2px solid black;
     margin: 10px 0px;
     border-radius: 20px;

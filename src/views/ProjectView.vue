@@ -91,6 +91,21 @@ export default {
                         },
                     ]
                 },
+                {
+                    id: 3,
+                    projectName: "Todo app",
+                    projectDescription: "En att göra lista! Perfekt för dig som har många saker att inte glömma bort väldigt enkel att använda",
+                    img: require("@/assets/testTodo.png"),
+                    icons: [
+                        {
+                            icon: require("@/assets/icons/icons8-html-5-32.png"),
+                        },
+                        {
+                            icon: require("@/assets/icons/icons8-html-5-32.png"),
+                        },
+                    ]
+                },
+                
             ],
         }
     },
@@ -120,6 +135,7 @@ export default {
     border-radius: 10px;
     gap: 50px;
     padding: 0px 20px;
+    text-align: center;
 }
 
 .content-align:hover
@@ -139,6 +155,7 @@ export default {
 .icons-container
 {
     display: flex;
+    margin:10px 0px;
     
 }
 .scale-icon {
