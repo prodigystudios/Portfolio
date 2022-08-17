@@ -6,13 +6,18 @@
                 <router-link :to="'project/' + project.id">
                     <h2>{{ project.projectName }}</h2>
                     <img class="img-scale" :src="project.img" :alt="project.projectName">
-                    <div class="spacing">
-                        <h3>{{ project.projectDescription }}</h3>
+                    <h3>{{ project.projectDescription }}</h3>
+                    <div class="icons-container">
+                        <div class="aling-icons" v-for="(icon, index) in project.icons" :key="index">
+                            <img class="scale-icon" :src="icon.icon">
+                        </div>
                     </div>
+
                 </router-link>
             </div>
         </div>
     </div>
+
 </template>
 
 
@@ -26,36 +31,65 @@ export default {
                     projectName: "Todo app",
                     projectDescription: "En att göra lista! Perfekt för dig som har många saker att inte glömma bort väldigt enkel att använda",
                     img: require("@/assets/testTodo.png"),
+                    icons: [
+                        {
+                            icon: require("@/assets/icons/icons8-html-5-32.png"),
+                        },
+                        {
+                            icon: require("@/assets/icons/icons8-css3-32.png"),
+                        },
+                        {
+                            icon: require("@/assets/icons/icons8-sql-32.png"),
+                        },
+                        {
+                            icon: require("@/assets/icons/icons8-c-sharp-logo-32.png"),
+                        },
+                        {
+                            icon: require("@/assets/logo.png"),
+                        },
+                    ]
                 },
                 {
                     id: 1,
                     projectName: "b",
                     projectDescription: "En att göra lista! Perfekt för dig som har många saker att inte glömma bort väldigt enkel att använda",
                     img: require("@/assets/testTodo.png"),
+                    icons: [
+                        {
+                            icon: require("@/assets/icons/icons8-html-5-32.png"),
+                        },
+                        {
+                            icon: require("@/assets/icons/icons8-html-5-32.png"),
+                        },
+                    ]
                 },
                 {
                     id: 2,
                     projectName: "c",
                     projectDescription: "En att göra lista! Perfekt för dig som har många saker att inte glömma bort väldigt enkel att använda",
                     img: require("@/assets/testTodo.png"),
+                    icons: [
+                        {
+                            icon: require("@/assets/icons/icons8-html-5-32.png"),
+                        },
+                        {
+                            icon: require("@/assets/icons/icons8-html-5-32.png"),
+                        },
+                    ]
                 },
                 {
                     id: 3,
                     projectName: "Todo app",
                     projectDescription: "En att göra lista! Perfekt för dig som har många saker att inte glömma bort väldigt enkel att använda",
-                    img: require("@/assets/testTodo.png"),  
-                },
-                {
-                    id: 4,
-                    projectName: "b",
-                    projectDescription: "b",
                     img: require("@/assets/testTodo.png"),
-                },
-                {
-                    id: 5,
-                    projectName: "c",
-                    projectDescription: "c",
-                    img: require("@/assets/testTodo.png"),
+                    icons: [
+                        {
+                            icon: require("@/assets/icons/icons8-html-5-32.png"),
+                        },
+                        {
+                            icon: require("@/assets/icons/icons8-html-5-32.png"),
+                        },
+                    ]
                 },
             ],
         }
@@ -64,7 +98,7 @@ export default {
 
 
 </script>
-
+    
 <style scoped>
 .center
 {
@@ -73,23 +107,17 @@ export default {
 
 .main-container
 {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 80px;
-    row-gap: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     width: 100%;
+    gap: 1em;
     margin-bottom: 20px;
 }
 
 .content-align
 {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
     border: 1px solid black;
     border-radius: 10px;
-    height: 500px;
-    width: 300px;
     gap: 50px;
     padding: 0px 20px;
 }
@@ -97,18 +125,24 @@ export default {
 .content-align:hover
 {
     outline: rgba(135, 206, 250, 0.7) solid 5px;
-
 }
 
 .content-align a
 {
     color: black;
-    width: 100%
 }
-
 .content-align a:hover
 {
     color: rgba(135, 206, 250, 0.7);
+}
+
+.icons-container
+{
+    display: flex;
+    
+}
+.scale-icon {
+    width:32px;
 }
 
 .img-scale
