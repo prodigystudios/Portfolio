@@ -18,6 +18,9 @@
                         <img @click="selectedImage(i)" class="image-scale" :src="image.img">
                     </div>
                 </section>
+                <div class="links">
+                    <a v-bind:href="'' + project.githubLink">Länk till github repo</a>
+                </div>               
             </div>
         </div>
     </div>
@@ -33,6 +36,7 @@ export default {
                     id: 0,
                     projectName: "To do app",
                     projectDescription: "Perfekt för dig som behöver lista saker du behöver göra så du inte glömmer bort!",
+                    githubLink: 'https://github.com/prodigystudios/todo-api',
                     isClicked: false,
                     images: [
                         {
@@ -57,6 +61,7 @@ export default {
                     id: 1,
                     projectName: "Blogg app",
                     projectDescription: "En enkel blogg sida där du kan skapa, redigera och ta bort inlägg",
+                    githubLink: 'https://github.com/prodigystudios/blogg-with-api',
                     images: [
                         {
                             img: require("@/assets/Blogg/SizeTest.png"),
@@ -234,20 +239,21 @@ export default {
     margin: 10px 0px;
     border-radius: 20px;
 }
-
-.fade-enter-active
-{
-    transition: opacity 1s ease;
+.links {
+    margin-top: 20px;
+    padding: 0;
+    text-align: left;
+    box-shadow: 1px 1px 1px 1px;
+    border-radius: 5px;
+    text-align: center;
 }
-
-.fade-leave-active
-{
-    display: none;
+.links:hover {
+   outline: rgba(135, 206, 250, 0.7) solid 3px;
 }
-
-.fade-enter-from,
-.fade-leave-to
-{
-    opacity: 0;
+.links a{ 
+    color:rgb(155, 106, 106);
+}
+.links a:hover {
+    color:rgba(135, 206, 250, 0.7);
 }
 </style>

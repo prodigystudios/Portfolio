@@ -124,6 +124,7 @@ a:hover
 
 .footer-container
 {
+  
   bottom: 0;
   width: 100%;
   margin-top: 10px;

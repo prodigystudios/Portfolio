@@ -9,20 +9,20 @@
         Blivande front-end utvecklare med stort intresse för back-end utveckling
         <p>
           Hej och välkommen till min portfolio! <br />
-          Mitt namn är william ali, 29 årig utvecklare från sverige
+          Mitt namn är william ali, 29 årig utvecklare från sverige.
         </p>
         <p>
           Här kommer ni hitta information om mig och projekten jag har jobbat
           med och även projekt jag aktuellt jobbar på!
         </p>
-        <router-link to="/projects">Klicka här för att direkt se mina projekt!</router-link>
+        <router-link to="/projects">Klicka här för att direkt komma till mina projekt!</router-link>
       </h3>
       <div class="empty">
       </div>
       <carousel @next="next" @prev="prev" @stop="stop" @resume="resume" class="carousel" :projectTitle="projectTitle">
         <carousel-slide v-for="(slide, index) in slides" :key="slide" :index="index" :visableSlide="visableSlide"
           :direction="direction">
-          <router-link :to="'project/' + slide.id"><img :src="slide.img" alt="" /></router-link>
+          <router-link :to="'project/' + slide.id"><img class="image-scale" :src="slide.img" alt="" /></router-link>
         </carousel-slide>
       </carousel>
     </div>
@@ -93,8 +93,8 @@ export default {
         },
         {
           id: 1,
-          imageName: "En random bild bara",
-          img: require("@/assets/MainPagePicture.jpg"),
+          imageName: "Blogg app",
+          img: require("@/assets/Blogg/SizeTest.png"),
         },
       ],
       visableSlide: 0,
@@ -167,7 +167,10 @@ h3
 {
   margin-top: 5em;
 }
-
+.image-scale {
+  width: 700px;
+  object-fit: contain;
+}
 .head-container
 {
   display: grid;
@@ -184,7 +187,9 @@ h3
   margin-left: 50px;
   grid-area: carousel;
 }
-
+.heading-text {
+  grid-area: headingText;
+}
 .empty
 {
   grid-area: empty;
@@ -195,6 +200,11 @@ h3
   grid-area: headtext;
   width: 150%;
   margin-top: 100px;
+}
+.head-text-container p
+{
+  width: 80%;
+  margin:10px 0px;
 }
 
 .head-text-container a

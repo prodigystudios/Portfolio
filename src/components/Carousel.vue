@@ -1,8 +1,9 @@
 <template>
-    <transition name="fade">
-            <h2 v-if="hasStopped" class="project-title">{{ projectTitle }}</h2>
+    
+         <transition name="fade">
+            <h2  v-if="hasStopped" class="project-title">{{ projectTitle }}</h2>
     </transition>
-
+    
     <div @mouseover="stop()" @mouseleave="resume()" class="carousel">
         <div class="blur">
             <slot></slot>
@@ -51,15 +52,20 @@ export default {
     width: 700px;
     height: 400px;
     overflow: hidden;
+    border: 1px solid black;
     border-radius: 10px;
+}
+.carousel:hover {
+    outline: rgba(135, 206, 250, 0.7) solid 3px;
 }
 
 .project-title
 {
     position: absolute;
-    top: 24em;
-    left: 57em;
-
+    display: flex;
+    justify-content: flex-end;
+    top:24em;
+    width: 52%;
 }
 
 .blur:hover
@@ -70,8 +76,7 @@ export default {
 .btn-container
 {
     display: flex;
-    width: fit-content;
-    justify-content: center;
+    width: 50%;
     gap: 50px;
     margin-top: 15px;
     margin-left: 40%;
