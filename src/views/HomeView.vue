@@ -241,10 +241,13 @@ h3
 .mid-container
 {
   display: flex;
+  flex-wrap: wrap;
+  column-fill: balance;
   width: 100%;
   margin-bottom: 20px;
   margin-top: 20px;
-  gap: 430px;
+  column-gap: 430px;
+  row-gap: 5px;
 }
 
 .content-align
@@ -333,9 +336,11 @@ h3
   {
     display: flex;
     width: 100%;
+    flex-wrap: wrap;
     margin-bottom: 20px;
     margin-top: 20px;
     gap: 150px;
+  
   }
 
   .content-align
