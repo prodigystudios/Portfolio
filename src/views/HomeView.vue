@@ -339,7 +339,8 @@ h3
     flex-wrap: wrap;
     margin-bottom: 20px;
     margin-top: 20px;
-    gap: 150px;
+    column-gap: 150px;
+    row-gap: 5px;
   
   }
 
@@ -377,10 +378,12 @@ h3
   .mid-container
   {
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
     margin-bottom: 20px;
     margin-top: 20px;
-    gap: 14px;
+    column-gap: 14px;
+    row-gap: 5px;
   }
 
   .content-align
