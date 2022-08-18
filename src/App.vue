@@ -10,7 +10,27 @@
         <router-link to="/projects">Projekt</router-link>
         <router-link to="/contact">Kontakt</router-link>
       </nav>
-    </div>
+      <button class="mobile-menu-button" v-if="!mobileMenu" @click="mobileMenu = true">
+        <div class="hamburger-container">
+          <div class="row1"></div>
+          <div class="row2"></div>
+          <div class="row3"></div>
+        </div>
+      </button>
+      <button class="mobile-menu-button" v-if="mobileMenu" @click="mobileMenu = false">
+        <div class="cross-container">
+          <div class="cross1"></div>
+          <div class="cross2"></div>
+          <div class="cross3"></div>
+        </div>
+      </button>
+      <div @click="mobileMenu = false" v-if="mobileMenu" class="mobile-nav-container">
+          <router-link to="/">Hem</router-link>
+          <router-link to="/about">Om mig</router-link>
+          <router-link to="/projects">Projekt</router-link>
+          <router-link to="/contact">Kontakt</router-link>
+        </div>
+      </div>
   </header>
   <router-view />
   <footer class="footer-container">
@@ -36,6 +56,17 @@
   </footer>
 </template>
 
+<script>
+export default {
+  data() {
+    return {
+      mobileMenu: false,
+    }
+  }
+}
+</script>
+
+
 <style>
 html
 {
@@ -59,6 +90,11 @@ body
 header
 {
   width: 100%;
+}
+
+.mobile-menu-button
+{
+  display: none;
 }
 
 nav
@@ -273,7 +309,6 @@ p
     font-family: monospace;
     font-size: x-large;
   }
-
 }
 
 @media (max-width: 425px)
@@ -289,6 +324,46 @@ p
     display: none;
   }
 
+  .mobile-menu-button
+  {
+    display: block;
+  }
+
+  .row1,
+  .row2,
+  .row3
+  {
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+  }
+
+  .cross1
+  {
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(0px, 6px);
+  }
+
+  .cross2
+  {
+    opacity: 0;
+  }
+
+  .cross3
+  {
+    width: 35px;
+    height: 5px;
+
+    background-color: black;
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(0px, -8px);
+  }
+
   header
   {
     margin: 0;
@@ -301,6 +376,11 @@ p
     width: 100%;
     margin: 0;
     padding: 0;
+    justify-content: space-between;
+  }
+  .hamburger-container
+  {
+    margin-top: 10px;
   }
 
   .footer-content
@@ -309,20 +389,20 @@ p
     flex-direction: column;
     justify-content: center;
     height: 100%;
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
     text-align: center;
   }
 
   .about
   {
     width: 100%;
-    margin:0;
+    margin: 0;
   }
 
   .about p
   {
-    margin:0;
+    margin: 0;
     font-size: 14px;
   }
 
@@ -333,7 +413,7 @@ p
     row-gap: 10px;
     margin-bottom: 20px;
     width: 100%;
-    padding-left:0;
+    padding-left: 0;
   }
 
   .links a
@@ -347,6 +427,34 @@ p
     width: 100%;
     flex-direction: column;
     padding-right: 0px;
+  }
+
+  .mobile-nav-container
+  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    width: 409px;
+    height: 300px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.77);
+    color: wheat;
+    position: absolute;
+    top: 7em;
+  }
+
+  .mobile-nav-container a
+  {
+    color: white;
+    font-size: 20px;
+    text-decoration: underline;
+  }
+
+  .mobile-nav-container a:hover
+  {
+    color: rgba(135, 206, 250, 0.7)
   }
 }
 </style>

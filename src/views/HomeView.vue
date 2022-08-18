@@ -207,9 +207,6 @@ h3
   width: 150%;
   margin-top: 100px;
 }
-.head-text-container h3 {
-  text-decoration: underline;
-}
 
 .head-text-container p
 {
@@ -258,6 +255,10 @@ h3
   margin-top: 20px;
   column-gap: 430px;
   row-gap: 5px;
+}
+
+.mid-container h1 {
+  text-decoration: underline;
 }
 
 .content-align
