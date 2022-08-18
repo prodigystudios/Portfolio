@@ -73,7 +73,7 @@ nav
 
 nav a
 {
-  margin:0px 20px;
+  margin: 0px 20px;
   color: black;
 }
 
@@ -104,9 +104,9 @@ nav a.router-link-exact-active
 
 .header-logo
 {
-  margin-top:10px;
-  padding-bottom:10px;
-  margin-left:5px;
+  margin-top: 10px;
+  padding-bottom: 10px;
+  margin-left: 5px;
   width: 200px;
   height: 40px;
 }
@@ -124,13 +124,12 @@ a:hover
 
 .footer-container
 {
-  
+
   bottom: 0;
   width: 100%;
   margin-top: 10px;
   background: #f2f2f2;
   height: fit-content;
-
   border-radius: 5px;
   text-align: left;
   box-shadow: 1px 1px 4px 2px;
@@ -188,13 +187,18 @@ p
 
 @media screen and (max-width:4000px) and (min-width: 2880px)
 {
-  .footer-content p {
+  .footer-content p
+  {
     font-size: 30px;
   }
-  .footer-content h2 {
+
+  .footer-content h2
+  {
     font-size: 35px;
   }
-  .links a {
+
+  .links a
+  {
     font-size: 30px;
   }
 
@@ -272,15 +276,11 @@ p
 
 }
 
-@media (max-width: 480px)
+@media (max-width: 425px)
 {
 
   #app
   {
-    font-family: monospace;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    color: black;
     margin: auto;
   }
 
@@ -301,6 +301,52 @@ p
     width: 100%;
     margin: 0;
     padding: 0;
+  }
+
+  .footer-content
+  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    margin:0;
+    padding:0;
+    text-align: center;
+  }
+
+  .about
+  {
+    width: 100%;
+    margin:0;
+  }
+
+  .about p
+  {
+    margin:0;
+    font-size: 14px;
+  }
+
+  .links
+  {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    padding-left:0;
+  }
+
+  .links a
+  {
+    font-size: 16px;
+  }
+
+  .contact-details
+  {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding-right: 0px;
   }
 }
 </style>

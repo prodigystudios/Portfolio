@@ -167,10 +167,13 @@ h3
 {
   margin-top: 5em;
 }
-.image-scale {
+
+.image-scale
+{
   width: 700px;
   object-fit: contain;
 }
+
 .head-container
 {
   display: grid;
@@ -187,9 +190,12 @@ h3
   margin-left: 50px;
   grid-area: carousel;
 }
-.heading-text {
+
+.heading-text
+{
   grid-area: headingText;
 }
+
 .empty
 {
   grid-area: empty;
@@ -201,10 +207,14 @@ h3
   width: 150%;
   margin-top: 100px;
 }
+.head-text-container h3 {
+  text-decoration: underline;
+}
+
 .head-text-container p
 {
   width: 80%;
-  margin:10px 0px;
+  margin: 10px 0px;
 }
 
 .head-text-container a
@@ -259,15 +269,21 @@ h3
 
 @media screen and (max-width:4000px) and (min-width: 2880px)
 {
-  p {
+  p
+  {
     font-size: 30px;
   }
-  h3 {
+
+  h3
+  {
     font-size: 50px;
   }
-  .head-text-container a {
+
+  .head-text-container a
+  {
     font-size: 30px;
   }
+
   .main
   {
     margin: 60px 0px;
@@ -279,7 +295,7 @@ h3
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 0.3fr 0.3fr;
     grid-template-areas: "headtext carousel"
-    "empty btn-container";
+      "empty btn-container";
     gap: 500px;
     row-gap: 0;
   }
@@ -307,13 +323,12 @@ h3
     display: flex;
     gap: 5px;
     align-items: center;
-    
+
   }
 }
 
 @media screen and (max-width:768px) and (min-width: 480px)
 {
-
   .main
   {
     margin: 0;
@@ -341,7 +356,6 @@ h3
     margin-top: 20px;
     column-gap: 150px;
     row-gap: 5px;
-  
   }
 
   .content-align
@@ -350,10 +364,9 @@ h3
     gap: 5px;
     align-items: center;
   }
-
 }
 
-@media (max-width: 480px)
+@media (max-width: 425px)
 {
 
   .main
@@ -382,8 +395,8 @@ h3
     width: 100%;
     margin-bottom: 20px;
     margin-top: 20px;
-    column-gap: 14px;
-    row-gap: 5px;
+    column-gap: 150px;
+    row-gap: 30px;
   }
 
   .content-align
@@ -392,6 +405,5 @@ h3
     gap: 5px;
     align-items: center;
   }
-
 }
 </style>

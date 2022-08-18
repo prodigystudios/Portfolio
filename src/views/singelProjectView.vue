@@ -20,7 +20,7 @@
                 </section>
                 <div class="links">
                     <a v-bind:href="'' + project.githubLink">Länk till github repo</a>
-                </div>               
+                </div>
             </div>
         </div>
     </div>
@@ -204,6 +204,11 @@ export default {
     gap: 10px;
 }
 
+.align-text
+{
+    width: 100%;
+}
+
 .images-container
 {
     width: 100px;
@@ -239,7 +244,9 @@ export default {
     margin: 10px 0px;
     border-radius: 20px;
 }
-.links {
+
+.links
+{
     margin-top: 20px;
     padding: 0;
     text-align: left;
@@ -247,13 +254,43 @@ export default {
     border-radius: 5px;
     text-align: center;
 }
-.links:hover {
-   outline: rgba(135, 206, 250, 0.7) solid 3px;
+
+.links:hover
+{
+    outline: rgba(135, 206, 250, 0.7) solid 3px;
 }
-.links a{ 
-    color:rgb(155, 106, 106);
+
+.links a
+{
+    color: rgb(155, 106, 106);
 }
-.links a:hover {
-    color:rgba(135, 206, 250, 0.7);
+
+.links a:hover
+{
+    color: rgba(135, 206, 250, 0.7);
+}
+
+@media (max-width: 425px)
+{
+    .show_image_popup img
+    {
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 375px)
+{
+    .show_image_popup img
+    {
+        max-width: 350px;
+    }
+}
+
+@media (max-width: 320px)
+{
+    .show_image_popup img
+    {
+        max-width: 295px;
+    }
 }
 </style>

@@ -62,7 +62,7 @@ export default {
                         },
                         {
                             icon: require("@/assets/icons/icons8-sql-32.png"),
-                        }, 
+                        },
                         {
                             icon: require("@/assets/icons/icons8-c-sharp-logo-32.png"),
                         },
@@ -190,5 +190,17 @@ export default {
     width: 100%;
     height: 100%;
     object-fit: contain;
+}
+
+@media (max-width: 425px)
+{
+    .main-container
+    {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 400px);
+        width: 100%;
+        gap: 1em;
+        margin-bottom: 20px;
+    }
 }
 </style>

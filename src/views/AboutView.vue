@@ -30,13 +30,23 @@ a {
   margin: 20px 0px;
   display: flex;
   text-align: center;
+  justify-content: center;
+  width: 100%;
   border: 1px solid black;
   border-radius: 10px;
 }
 
 .head-container {
-  margin:0px 250px;
+  width: 50%;
   line-height: 25px;
 }  
+
+
+@media (max-width: 425px) {
+  .head-container {
+  width: 100%;
+  line-height: 25px;
+}  
+}
 
 </style>
