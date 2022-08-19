@@ -1,6 +1,6 @@
 <template>
     <div>
-        <img class="img-top" src="../assets/ContactMePicture.jpg" height="300" alt="Contact">
+        <img class="img-top" src="../assets/ContactMePicture.jpg" height="450" alt="Contact">
     </div>
     <ContactForm />
 </template>
@@ -22,5 +22,6 @@ export default {
     margin-bottom: 5px;
     border-radius: 10px;
     box-shadow: 1px 2px black;
+    
 }
 </style>

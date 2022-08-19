@@ -53,7 +53,19 @@ export default {
                         },
                         {
                             img: require("@/assets/TodoImages/NewUppload/TodoSaveCodeSnip.png"),
-                            indepthDescription: "Det här visar hur jag hanterar calls till min databas för att spara nya värden"
+                            indepthDescription: "Det här visar hur jag hanterar calls till min api för att spara nya värden till databasen"
+                        },
+                         {
+                            img: require("@/assets/TodoImages/NewUppload/CodeSnipDatabase.png"),
+                            indepthDescription: "Här hämtar vi alla poster i min sql databas"
+                        },
+                        {
+                            img: require("@/assets/TodoImages/NewUppload/SnapGetByid.png"),
+                            indepthDescription: "Här hämtar vi en specifk post ifrån min databas som har samma id som vi efter frågar"
+                        },
+                        {
+                            img: require("@/assets/TodoImages/NewUppload/snapCreateNewAndDelete.png"),
+                            indepthDescription: "Här hanterar vi hur vi sparar nya poster och tar bort poster ifrån databasen"
                         },
                     ]
                 },
@@ -229,7 +241,9 @@ export default {
     outline: rgba(135, 206, 250, 0.7) solid 3px;
     cursor: pointer;
 }
-
+.large-image {
+   
+}
 .show_image_popup
 {
     height: fit-content;

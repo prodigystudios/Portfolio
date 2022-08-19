@@ -1,6 +1,6 @@
 <template>
   <div>
-    <img class="img-top" src="../assets/MainPagePicture.jpg" height="300" />
+    <img class="img-top" src="../assets/MainPagePicture.jpg"/>
     <div class="divider"></div>
   </div>
   <div class="main">
@@ -31,7 +31,7 @@
 
   <div class="mid-container">
     <div>
-      <h1>TechStacks</h1>
+      <h1>Språk</h1>
       <div class="content-align">
         <img src="../assets/icons/icons8-html-5-32.png" width="32" height="32" alt="HTML5 Powered"
           title="HTML5 Powered" />
@@ -39,15 +39,15 @@
       </div>
       <div class="content-align">
         <img src="../assets/icons/icons8-css3-32.png" width="32" height="32" />
-        <h3>css</h3>
+        <h3>Css</h3>
       </div>
       <div class="content-align">
         <img src="../assets/icons/icons8-javascript-32.png" width="32" height="32" />
-        <h3>js</h3>
+        <h3>Js</h3>
       </div>
       <div class="content-align">
         <img src="../assets/icons/icons8-c-sharp-logo-32.png" width="32" height="32" />
-        <h3>c#</h3>
+        <h3>C#</h3>
       </div>
     </div>
     <div>
@@ -230,10 +230,12 @@ h3
 {
   margin-top: 5px;
   width: 100%;
+  height:450px;
   margin-top: 20px;
   margin-bottom: 5px;
   border-radius: 10px;
   box-shadow: 1px 2px black;
+  object-fit: cover;
 }
 
 .divider
