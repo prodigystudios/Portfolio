@@ -68,6 +68,11 @@ export default {
 
 
 <style>
+
+:root {
+  --clr-hover-link: rgba(135, 206, 250, 0.7);
+}
+
 html
 {
   overflow-y: scroll;
@@ -154,7 +159,7 @@ a
 
 a:hover
 {
-  color: rgba(135, 206, 250, 0.7)
+  color: var(--clr-hover-link);
 }
 
 
@@ -202,6 +207,11 @@ a:hover
 .links a
 {
   font-size: 16px;
+  color:black;
+  text-decoration: underline;
+}
+.links a:hover {
+  color: var(--clr-hover-link);
 }
 
 .contact-details
