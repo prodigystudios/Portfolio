@@ -73,15 +73,18 @@ export default {
                 },
                 {
                     id: 2,
-                    projectName: "c",
-                    projectDescription: "En att göra lista! Perfekt för dig som har många saker att inte glömma bort väldigt enkel att använda",
-                    img: require("@/assets/testTodo.png"),
+                    projectName: "Brödernas Clone",
+                    projectDescription: "En enkel clone av med en del av brödernas information och en meny",
+                    img: require("@/assets/BrödernasClone/Home.png"),
                     icons: [
                         {
                             icon: require("@/assets/icons/icons8-html-5-32.png"),
                         },
                         {
-                            icon: require("@/assets/icons/icons8-html-5-32.png"),
+                            icon: require("@/assets/icons/icons8-css3-32.png"),
+                        },
+                        {
+                            icon: require("@/assets/logo.png"),
                         },
                     ]
                 },
@@ -188,7 +191,7 @@ export default {
 .img-scale
 {
     width: 100%;
-    height: 100%;
+    height: 115px;
     object-fit: contain;
 }
 

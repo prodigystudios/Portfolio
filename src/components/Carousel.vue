@@ -1,9 +1,9 @@
 <template>
-    
-         <transition name="fade">
-            <h2  v-if="hasStopped" class="project-title">{{ projectTitle }}</h2>
+
+    <transition name="fade">
+        <h2 v-if="hasStopped" class="project-title">{{ projectTitle }}</h2>
     </transition>
-    
+
     <div @mouseover="stop()" @mouseleave="resume()" class="carousel">
         <div class="blur">
             <slot></slot>
@@ -28,7 +28,7 @@ export default {
     methods: {
         next() {
             this.$emit('next')
-            
+
         },
         prev() {
             this.$emit('prev')
@@ -55,7 +55,9 @@ export default {
     border: 1px solid black;
     border-radius: 10px;
 }
-.carousel:hover {
+
+.carousel:hover
+{
     outline: rgba(135, 206, 250, 0.7) solid 3px;
 }
 
@@ -64,7 +66,7 @@ export default {
     position: absolute;
     display: flex;
     justify-content: flex-end;
-    top:24em;
+    top: 32em;
     width: 52%;
 }
 
@@ -101,22 +103,27 @@ button:hover
 }
 
 .fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.5s ease;
+.fade-leave-active
+{
+    transition: opacity 0.5s ease;
 }
 
 .fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
+.fade-leave-to
+{
+    opacity: 0;
 }
 
-@media (max-width: 480px) {
-    .carousel {
-     display:none;   
+@media (max-width: 480px)
+{
+    .carousel
+    {
+        display: none;
     }
-    button {
-        display:none;
+
+    button
+    {
+        display: none;
     }
 }
-
 </style>

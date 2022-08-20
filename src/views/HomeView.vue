@@ -96,6 +96,11 @@ export default {
           imageName: "Blogg app",
           img: require("@/assets/Blogg/SizeTest.png"),
         },
+         {
+          id: 2,
+          imageName: "Brödernas Clone",
+          img: require("@/assets/BrödernasClone/Home.png"),
+        },
       ],
       visableSlide: 0,
       index: 0,
@@ -171,7 +176,8 @@ h3
 .image-scale
 {
   width: 700px;
-  object-fit: contain;
+  height: 400px;
+  object-fit:cover;
 }
 
 .head-container

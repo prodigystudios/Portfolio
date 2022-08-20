@@ -18,9 +18,15 @@
                         <img @click="selectedImage(i)" class="image-scale" :src="image.img">
                     </div>
                 </section>
-                <div class="links">
-                    <a v-bind:href="'' + project.githubLink">Länk till github repo</a>
+                <div class="link-Container">
+                    <div v-if="project.githubLink != null" class="links">
+                        <a v-bind:href="'' + project.githubLink">Länk till github repo</a>
+                    </div>
+                    <div v-if="project.githublinkApi != null" class="links">
+                        <a v-bind:href="'' + project.githublinkApi">Länk till github api</a>
+                    </div>
                 </div>
+
             </div>
         </div>
     </div>
@@ -37,6 +43,7 @@ export default {
                     projectName: "To do app",
                     projectDescription: "Perfekt för dig som behöver lista saker du behöver göra så du inte glömmer bort!",
                     githubLink: 'https://github.com/prodigystudios/todo-api',
+                    githublinkApi: 'https://github.com/prodigystudios/TodoApi',
                     isClicked: false,
                     images: [
                         {
@@ -55,7 +62,7 @@ export default {
                             img: require("@/assets/TodoImages/NewUppload/TodoSaveCodeSnip.png"),
                             indepthDescription: "Det här visar hur jag hanterar calls till min api för att spara nya värden till databasen"
                         },
-                         {
+                        {
                             img: require("@/assets/TodoImages/NewUppload/CodeSnipDatabase.png"),
                             indepthDescription: "Här hämtar vi alla poster i min sql databas"
                         },
@@ -100,20 +107,29 @@ export default {
                 },
                 {
                     id: 2,
-                    projectName: "c",
-                    projectDescription: "En att göra lista! Perfekt för dig som har många saker att inte glömma bort väldigt enkel att använda",
-
+                    projectName: "Brödernas clone",
+                    projectDescription: "Det här en liten enkel clone av brödernas hemsida",
+                    githubLink: "https://github.com/prodigystudios/BrothersCloneWebsite",
                     images: [
                         {
-                            img: require("@/assets/testTodo.png"),
-                            indepthDescription: 'Det här är min frontend av att göra lista. Du kan lägga till saker att göra via input fältet ' +
-                                'Du kan stryka över avslutade uppgfiter ur listan och klicka på x för att ta bort vald uppgift. Eller ta bort allting'
+                            img: require("@/assets/BrödernasClone/Home.png"),
+                            indepthDescription: 'Här ser vi första sidan med enkla texter som beskriver resturangen',
                         },
                         {
-                            img: require("@/assets/testTodo.png")
+                            img: require("@/assets/BrödernasClone/Menu.png"),
+                            indepthDescription: 'Här har vi menyn för veckan'
                         },
                         {
-                            img: require("@/assets/testTodo.png")
+                            img: require("@/assets/BrödernasClone/Contact.png"),
+                            indepthDescription: 'en enkel sida där kontakt informationen finns'
+                        },
+                        {
+                            img: require("@/assets/BrödernasClone/codeMenuHtml.png"),
+                            indepthDescription: 'html med en vue for loop som skapar element för varje dag'
+                        },
+                        {
+                            img: require("@/assets/BrödernasClone/codeMenuJS.png"),
+                            indepthDescription: 'o här har vi lite enkel javascript för att skapa våra object med information som ska visas på hemsidan'
                         },
                     ]
                 },
@@ -241,9 +257,7 @@ export default {
     outline: rgba(135, 206, 250, 0.7) solid 3px;
     cursor: pointer;
 }
-.large-image {
-   
-}
+
 .show_image_popup
 {
     height: fit-content;
@@ -282,6 +296,14 @@ export default {
 .links a:hover
 {
     color: rgba(135, 206, 250, 0.7);
+}
+
+.link-Container
+{
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 @media (max-width: 425px)
