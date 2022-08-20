@@ -71,6 +71,7 @@ export default {
 
 :root {
   --clr-hover-link: rgba(135, 206, 250, 0.7);
+  --clr-hover-link-Bright: rgba(135, 206, 250, 0.9);
 }
 
 html
