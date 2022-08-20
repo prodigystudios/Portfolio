@@ -4,7 +4,6 @@
             <div class="container" id="focus-picture" v-if="tempId == project.id">
                 <h1>{{ project.projectName }}</h1>
                 <p>{{ project.projectDescription }}</p>
-
                 <section class="aling-images">
                     <div v-if="tempId == project.id" class="show_image_popup">
                         <div class="image-show-area">
@@ -26,17 +25,18 @@
                         <a v-bind:href="'' + project.githublinkApi">Länk till github api</a>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
 </template>
 
 <script>
-export default {
 
+export default {
+    
     data() {
         return {
+            
             projects: [
                 {
                     id: 0,
@@ -137,7 +137,7 @@ export default {
                     id: 3,
                     projectName: "Webshop",
                     projectDescription: "En super enkel webshop! Där du kan se information om produkten med bilder",
-
+                    githubLink: 'https://github.com/prodigystudios/vue-webshop',
                     images: [
                         {
                             img: require("@/assets/Webshop/Home.png"),

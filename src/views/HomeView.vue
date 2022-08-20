@@ -101,6 +101,11 @@ export default {
           imageName: "Brödernas Clone",
           img: require("@/assets/BrödernasClone/Home.png"),
         },
+        {
+          id: 3,
+          imageName: "WebShop",
+          img: require("@/assets/Webshop/Home.png"),
+        },
       ],
       visableSlide: 0,
       index: 0,
