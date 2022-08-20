@@ -135,20 +135,33 @@ export default {
                 },
                 {
                     id: 3,
-                    projectName: "Todo app",
-                    projectDescription: "En att göra lista! Perfekt för dig som har många saker att inte glömma bort väldigt enkel att använda",
+                    projectName: "Webshop",
+                    projectDescription: "En super enkel webshop! Där du kan se information om produkten med bilder",
 
                     images: [
                         {
-                            img: require("@/assets/testTodo.png"),
-                            indepthDescription: 'Det här är min frontend av att göra lista. Du kan lägga till saker att göra via input fältet ' +
-                                'Du kan stryka över avslutade uppgfiter ur listan och klicka på x för att ta bort vald uppgift. Eller ta bort allting'
+                            img: require("@/assets/Webshop/Home.png"),
+                            indepthDescription: 'Här listas alla produkter som finns i våran databas'
                         },
                         {
-                            img: require("@/assets/testTodo.png")
+                            img: require("@/assets/Webshop/ProductView.png"),
+                            indepthDescription: 'Här ser vi en bild med information om produkten och ett pris, här kan vi även välja om vi vill köpa produkten'
                         },
                         {
-                            img: require("@/assets/testTodo.png")
+                            img: require("@/assets/Webshop/KöpView.png"),
+                            indepthDescription: 'Nu är det dags för betalning! här ser vi information på produkten igen, här fyller vi i information om oss som köper produkten och betalnings informationen'
+                        },
+                        {
+                            img: require("@/assets/Webshop/ProductListCode.png"),
+                            indepthDescription: 'Här ser vi koden som gör ett call till våran api som sedan hämtar alla produkter ur databasen och sedan listar dom på sidan'
+                        },
+                        {
+                            img: require("@/assets/Webshop/ProductViewCode.png"),
+                            indepthDescription: 'Här hämtar vi informationen ifrån databasen om vald produkt och visar den på sidan'
+                        },
+                        {
+                            img: require("@/assets/Webshop/CartViewCode.png"),
+                            indepthDescription: 'Här sparar vi informationen som vi fyller in i vårat formulär för att sedan kunna hantera validering och kontakt till bank'
                         },
                     ]
                 },

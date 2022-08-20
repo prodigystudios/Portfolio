@@ -90,33 +90,27 @@ export default {
                 },
                 {
                     id: 3,
-                    projectName: "Todo app",
-                    projectDescription: "En att göra lista! Perfekt för dig som har många saker att inte glömma bort väldigt enkel att använda",
-                    img: require("@/assets/testTodo.png"),
+                    projectName: "Webshop",
+                    projectDescription: "En super enkel webshop! Där du kan se information om produkten med bilder",
+                    img: require("@/assets/Webshop/Home.png"),
                     icons: [
                         {
                             icon: require("@/assets/icons/icons8-html-5-32.png"),
                         },
                         {
-                            icon: require("@/assets/icons/icons8-html-5-32.png"),
+                            icon: require("@/assets/icons/icons8-css3-32.png"),
+                        },
+                        {
+                            icon: require("@/assets/icons/icons8-sql-32.png"),
+                        },
+                        {
+                            icon: require("@/assets/icons/icons8-c-sharp-logo-32.png"),
+                        },
+                        {
+                            icon: require("@/assets/logo.png"),
                         },
                     ]
                 },
-                {
-                    id: 3,
-                    projectName: "Todo app",
-                    projectDescription: "En att göra lista! Perfekt för dig som har många saker att inte glömma bort väldigt enkel att använda",
-                    img: require("@/assets/testTodo.png"),
-                    icons: [
-                        {
-                            icon: require("@/assets/icons/icons8-html-5-32.png"),
-                        },
-                        {
-                            icon: require("@/assets/icons/icons8-html-5-32.png"),
-                        },
-                    ]
-                },
-
             ],
         }
     },
