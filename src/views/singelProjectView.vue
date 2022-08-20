@@ -267,7 +267,7 @@ export default {
 
 .images-container:hover
 {
-    outline: rgba(135, 206, 250, 0.7) solid 3px;
+    outline: var(--clr-hover-link) solid 2px;
     cursor: pointer;
 }
 
@@ -298,7 +298,7 @@ export default {
 
 .links:hover
 {
-    outline: rgba(135, 206, 250, 0.7) solid 3px;
+    outline: var(--clr-hover-link);
 }
 
 .links a

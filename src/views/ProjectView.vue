@@ -155,7 +155,7 @@ export default {
 
 .content-align:hover
 {
-    outline: rgba(135, 206, 250, 0.7) solid 5px;
+    outline: var(--clr-hover-link) solid 2px;
 }
 
 .content-align a

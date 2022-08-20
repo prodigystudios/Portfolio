@@ -57,6 +57,10 @@
         <h3>ASP.NET</h3>
       </div>
       <div class="content-align">
+        <img src="../assets/icons/icons8-.net-framework-32.png" width="32" height="32" />
+        <h3>Entity framework</h3>
+      </div>
+      <div class="content-align">
         <img src="../assets/logo.png" width="32" height="32" />
         <h3>Vue.js</h3>
       </div>
@@ -234,7 +238,7 @@ h3
 
 .head-text-container a:hover
 {
-  color: rgba(135, 206, 250, 0.7);
+  color: var(--clr-hover-link);
 }
 
 .img-top
@@ -266,7 +270,7 @@ h3
   width: 100%;
   margin-bottom: 20px;
   margin-top: 20px;
-  column-gap: 430px;
+  column-gap: 394px;
   row-gap: 5px;
 }
 

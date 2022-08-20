@@ -65,7 +65,7 @@ export default {
 }
 
 .carousel:hover {
-  outline: rgba(135, 206, 250, 0.7) solid 3px;
+  outline:var(--clr-hover-link) solid 2px;
 }
 
 .project-title {
