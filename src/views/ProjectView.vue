@@ -2,8 +2,8 @@
     <h1 class="center">Mina projekt!</h1>
     <div class="main-container">
         <div class="content-align" v-for="project in projects" :key="project.id">
-            <div>
-                <router-link :to="'project/' + project.id">
+            <router-link :to="'project/' + project.id">
+                <div>
                     <h2>{{ project.projectName }}</h2>
                     <img class="img-scale" :src="project.img" :alt="project.projectName">
                     <h3>{{ project.projectDescription }}</h3>
@@ -12,8 +12,8 @@
                             <img class="scale-icon" :src="icon.icon">
                         </div>
                     </div>
-                </router-link>
-            </div>
+                </div>
+            </router-link>
         </div>
     </div>
 
@@ -42,6 +42,9 @@ export default {
                         },
                         {
                             icon: require("@/assets/icons/icons8-c-sharp-logo-32.png"),
+                        },
+                        {
+                            icon: require("@/assets/icons/icons8-.net-framework-32.png"),
                         },
                         {
                             icon: require("@/assets/logo.png"),
@@ -144,13 +147,13 @@ export default {
     border: 1px solid black;
     border-radius: 10px;
     gap: 50px;
-    padding: 0px 20px;
     text-align: center;
 }
 
 .content-align h3
 {
     height: 90px;
+    padding:0px 20px;
 }
 
 .content-align:hover
@@ -188,7 +191,6 @@ export default {
     height: 115px;
     object-fit: contain;
 }
-
 @media (max-width: 425px)
 {
     .main-container

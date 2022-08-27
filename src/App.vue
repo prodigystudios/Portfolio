@@ -25,19 +25,20 @@
         </div>
       </button>
       <div @click="mobileMenu = false" v-if="mobileMenu" class="mobile-nav-container">
-          <router-link to="/">Hem</router-link>
-          <router-link to="/about">Om mig</router-link>
-          <router-link to="/projects">Projekt</router-link>
-          <router-link to="/contact">Kontakt</router-link>
-        </div>
+        <router-link to="/">Hem</router-link>
+        <router-link to="/about">Om mig</router-link>
+        <router-link to="/projects">Projekt</router-link>
+        <router-link to="/contact">Kontakt</router-link>
       </div>
+    </div>
   </header>
   <router-view />
   <footer class="footer-container">
     <div class="footer-content">
       <div class="about">
         <h2>Om mig</h2>
-        <p>Hej mitt namn är william 29 årig utvecklare från sverige</p>
+        <p>Mitt namn är william ali, 29 årig utvecklare från sverige Här kommer ni hitta information om mig och
+          projekten jag har jobbat med och även projekt jag aktuellt jobbar på!</p>
       </div>
       <div class="links">
         <h2>Snabb länkar</h2>
@@ -49,8 +50,8 @@
       <div class="contact-details">
         <h2>Kontakta mig</h2>
         <p>William ali</p>
-        <p>telefonnummer: 072-90 22 198</p>
-        <p>Email: william.ali@hotmail.se</p>
+        <a href="tel: 072-90 22 198">Telefonnummer: 072-90 22 198</a>
+        <a href="mailto:william.ali@hotmail.se">Email: william.ali@hotmail.se</a>
       </div>
     </div>
   </footer>
@@ -68,10 +69,11 @@ export default {
 
 
 <style>
-
-:root {
+:root
+{
   --clr-hover-link: rgba(135, 206, 250, 0.7);
   --clr-hover-link-Bright: rgba(135, 206, 250, 0.9);
+  --clr-standard-link-color: rgb(155, 106, 106);
 }
 
 html
@@ -110,6 +112,7 @@ nav
   justify-content: center;
   align-items: center;
   font-size: 18px;
+  font-weight: bold;
   width: 100%;
 }
 
@@ -121,7 +124,7 @@ nav a
 
 nav a.router-link-exact-active
 {
-  color: rgb(155, 106, 106)
+  color: var(--clr-standard-link-color);
 }
 
 .header
@@ -166,7 +169,6 @@ a:hover
 
 .footer-container
 {
-
   bottom: 0;
   width: 100%;
   margin-top: 10px;
@@ -180,6 +182,7 @@ a:hover
 .footer-content
 {
   display: flex;
+  justify-content: center;
   height: 100%;
   gap: 0.3em;
 }
@@ -193,6 +196,7 @@ a:hover
 .about p
 {
   font-size: 14px;
+  width: 80%;
 }
 
 .links
@@ -208,10 +212,12 @@ a:hover
 .links a
 {
   font-size: 16px;
-  color:black;
+  color: var(--clr-standard-link-color);
   text-decoration: underline;
 }
-.links a:hover {
+
+.links a:hover
+{
   color: var(--clr-hover-link);
 }
 
@@ -224,12 +230,20 @@ a:hover
 
 .contact-details p
 {
-  font-size: 14px;
+  font-size: 16px;
 }
 
-p
+.contact-details a
 {
-  margin: 5px;
+  font-size: 16px;
+  color: var(--clr-standard-link-color);
+  margin: 0;
+  padding: 5px 0px;
+}
+
+.contact-details a:hover
+{
+  color: var(--clr-hover-link);
 }
 
 @media screen and (max-width:4000px) and (min-width: 2880px)
@@ -389,6 +403,7 @@ p
     padding: 0;
     justify-content: space-between;
   }
+
   .hamburger-container
   {
     margin-top: 10px;

@@ -35,7 +35,12 @@ a {
   border: 1px solid black;
   border-radius: 10px;
 }
-
+a {
+  color:black;
+}
+a:hover {
+  color:var(--clr-hover-link)
+}
 .head-container {
   width: 50%;
   line-height: 25px;

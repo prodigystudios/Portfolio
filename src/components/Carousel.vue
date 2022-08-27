@@ -76,8 +76,11 @@ export default {
   width: 52%;
 }
 
+.blur {
+  transition: 0.18s;
+}
 .blur:hover {
-  filter: blur(8px);
+  filter: blur(4px);
 }
 
 .btn-container {
