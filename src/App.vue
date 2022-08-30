@@ -189,12 +189,15 @@ a:hover
 
 .about
 {
+  display:flex;
+  flex-direction: column;
   width: 40%;
   margin-left: 5px;
 }
 
 .about p
 {
+  margin-top:20px;
   font-size: 14px;
   width: 80%;
 }
@@ -422,6 +425,7 @@ a:hover
 
   .about
   {
+    align-items: center;
     width: 100%;
     margin: 0;
   }

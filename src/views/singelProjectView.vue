@@ -19,10 +19,13 @@
                 </section>
                 <div class="link-Container">
                     <div v-if="project.githubLink != null" class="links">
-                        <a v-bind:href="'' + project.githubLink">Länk till github repo</a>
+                        <a :href="'' + project.githubLink">Länk till github repo</a>
                     </div>
                     <div v-if="project.githublinkApi != null" class="links">
-                        <a v-bind:href="'' + project.githublinkApi">Länk till github api</a>
+                        <a :href="'' + project.githublinkApi">Länk till github api</a>
+                    </div>
+                    <div v-if="project.liveSiteLink != null" class="links">
+                        <a :href="'' + project.liveSiteLink">Länk till live site</a>
                     </div>
                 </div>
             </div>
@@ -101,7 +104,6 @@ export default {
                         {
                             img: require("@/assets/Blogg/CodeSnipTwo.png"),
                             indepthDescription: 'CodeSnip: Hämta alla inlägg från databasen'
-
                         },
                     ]
                 },
@@ -167,40 +169,15 @@ export default {
                 },
                 {
                     id: 4,
-                    projectName: "b",
-                    projectDescription: "b",
-
+                    projectName: "Väder app",
+                    projectDescription: "En enkel lite väder app där du kan se vädret idag och 7 dagar framöver",
+                    githubLink: 'https://github.com/prodigystudios/vue-webshop',
+                    liveSiteLink: 'https://prodigystudios.github.io/weatherapp/#/',
                     images: [
                         {
-                            img: require("@/assets/testTodo.png"),
-                            indepthDescription: 'Det här är min frontend av att göra lista. Du kan lägga till saker att göra via input fältet ' +
-                                'Du kan stryka över avslutade uppgfiter ur listan och klicka på x för att ta bort vald uppgift. Eller ta bort allting'
-                        },
-                        {
-                            img: require("@/assets/testTodo.png")
-                        },
-                        {
-                            img: require("@/assets/testTodo.png")
-                        },
-                    ]
-                },
-                {
-                    id: 5,
-                    projectName: "c",
-                    projectDescription: "c",
-
-                    images: [
-                        {
-                            img: require("@/assets/testTodo.png"),
-                            indepthDescription: 'Det här är min frontend av att göra lista. Du kan lägga till saker att göra via input fältet ' +
-                                'Du kan stryka över avslutade uppgfiter ur listan och klicka på x för att ta bort vald uppgift. Eller ta bort allting'
-                        },
-                        {
-                            img: require("@/assets/testTodo.png")
-                        },
-                        {
-                            img: require("@/assets/testTodo.png")
-                        },
+                            img: require("@/assets/WheaterApp/Home.png"),
+                            indepthDescription: 'Så här ser applikationen ut, väldigt enkel. Här kan du se vädret idag och 7 dagarar framöver, vi ser även ikoner på vilken typ av väder vi får'
+                        }
                     ]
                 },
             ],
@@ -289,11 +266,12 @@ export default {
 .links
 {
     margin-top: 20px;
-    padding: 0;
+    padding: 5px;
     text-align: left;
     box-shadow: 1px 1px 1px 1px;
     border-radius: 5px;
     text-align: center;
+    font-weight: bold;
 }
 
 .links:hover

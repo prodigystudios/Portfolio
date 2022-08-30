@@ -4,9 +4,9 @@
         <div class="content-align" v-for="project in projects" :key="project.id">
             <router-link :to="'project/' + project.id">
                 <div>
-                    <h2>{{ project.projectName }}</h2>
+                    <h2>{{  project.projectName  }}</h2>
                     <img class="img-scale" :src="project.img" :alt="project.projectName">
-                    <h3>{{ project.projectDescription }}</h3>
+                    <h3>{{  project.projectDescription  }}</h3>
                     <div class="icons-container">
                         <div class="aling-icons" v-for="(icon, index) in project.icons" :key="index">
                             <img class="scale-icon" :src="icon.icon">
@@ -16,9 +16,7 @@
             </router-link>
         </div>
     </div>
-
 </template>
-
 
 <script>
 export default {
@@ -114,12 +112,27 @@ export default {
                         },
                     ]
                 },
+                {
+                    id: 4,
+                    projectName: "Väder app",
+                    projectDescription: "En enkel lite väder app där du kan se vädret idag och 7 dagar framöver",
+                    img: require("@/assets/WheaterApp/Home.png"),
+                    icons: [
+                        {
+                            icon: require("@/assets/icons/icons8-html-5-32.png"),
+                        },
+                        {
+                            icon: require("@/assets/icons/icons8-css3-32.png"),
+                        },
+                        {
+                            icon: require("@/assets/logo.png"),
+                        },
+                    ]
+                },
             ],
         }
     },
 }
-
-
 </script>
     
 <style scoped>
@@ -128,15 +141,10 @@ export default {
     text-align: center;
 }
 
-.sub
-{
-    position: relative;
-}
-
 .main-container
 {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fill, 246px);
     width: 100%;
     gap: 1em;
     margin-bottom: 20px;
@@ -148,12 +156,13 @@ export default {
     border-radius: 10px;
     gap: 50px;
     text-align: center;
+
 }
 
 .content-align h3
 {
     height: 90px;
-    padding:0px 20px;
+    padding: 0px 20px;
 }
 
 .content-align:hover
@@ -170,7 +179,6 @@ export default {
 {
     color: rgba(135, 206, 250, 0.7);
 }
-
 
 .icons-container
 {
@@ -191,6 +199,7 @@ export default {
     height: 115px;
     object-fit: contain;
 }
+
 @media (max-width: 425px)
 {
     .main-container

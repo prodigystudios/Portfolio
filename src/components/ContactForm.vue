@@ -194,13 +194,11 @@ input:invalid
 .firstname
 {
     grid-area: firstname;
-
 }
 
 .lastname
 {
     grid-area: lastname;
-
 }
 
 .email
@@ -211,7 +209,6 @@ input:invalid
 .message
 {
     grid-area: message;
-
 }
 
 .send

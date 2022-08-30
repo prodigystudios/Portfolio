@@ -30,6 +30,7 @@
 <script>
 export default {
   props: ["projectTitle"],
+  emits: ["next","prev","stop","resume"],
   data() {
     return {
       hasStopped: false,

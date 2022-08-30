@@ -132,7 +132,6 @@ export default {
         this.visableSlide++;
         this.projectTitle = this.slides[this.visableSlide].imageName;
       }
-      console.log(this.index);
       this.direction = "left";
     },
     prev() {
