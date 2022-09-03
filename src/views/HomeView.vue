@@ -1,6 +1,6 @@
 <template>
   <div>
-    <img class="img-top" src="../assets/MainPagePicture.jpg"/>
+    <img class="img-top" src="../assets/MainPagePicture.jpg" />
     <div class="divider"></div>
   </div>
   <div class="main">
@@ -19,12 +19,14 @@
       </h3>
       <div class="empty">
       </div>
-      <carousel @next="next" @prev="prev" @stop="stop" @resume="resume" class="carousel" :projectTitle="projectTitle">
-        <carousel-slide v-for="(slide, index) in slides" :key="slide" :index="index" :visableSlide="visableSlide"
+
+      <Carousel @next="next" @prev="prev" @stop="stop" @resume="resume" class="carousel" :projectTitle="projectTitle">
+        <Carousel-slide v-for="(slide, index) in slides" :key="slide" :index="index" :visableSlide="visableSlide"
           :direction="direction">
           <router-link :to="'project/' + slide.id"><img class="image-scale" :src="slide.img" alt="" /></router-link>
-        </carousel-slide>
-      </carousel>
+        </Carousel-slide>
+      </Carousel>
+
     </div>
   </div>
   <div class="divider"></div>
@@ -100,7 +102,7 @@ export default {
           imageName: "Blogg app",
           img: require("@/assets/Blogg/SizeTest.png"),
         },
-         {
+        {
           id: 2,
           imageName: "Brödernas Clone",
           img: require("@/assets/BrödernasClone/Home.png"),
@@ -185,7 +187,7 @@ h3
 {
   width: 700px;
   height: 400px;
-  object-fit:cover;
+  object-fit: cover;
 }
 
 .head-container
@@ -244,7 +246,7 @@ h3
 {
   margin-top: 5px;
   width: 100%;
-  height:450px;
+  height: 450px;
   margin-top: 20px;
   margin-bottom: 5px;
   border-radius: 10px;
@@ -273,7 +275,8 @@ h3
   row-gap: 5px;
 }
 
-.mid-container h1 {
+.mid-container h1
+{
   text-decoration: underline;
 }
 

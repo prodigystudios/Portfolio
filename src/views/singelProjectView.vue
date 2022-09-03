@@ -257,10 +257,11 @@ export default {
 {
     width: 1280px;
     height: 500px;
-    object-fit: contain;
+    object-fit:contain;
     border: 2px solid black;
     margin: 10px 0px;
     border-radius: 20px;
+    
 }
 
 .links

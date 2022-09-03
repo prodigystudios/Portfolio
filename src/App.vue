@@ -1,5 +1,5 @@
 <template>
-  <header class="header">
+  <header class="header" ref="top">
     <div class="header-name-container">
       <router-link to="/">
         <img class="header-logo" src='./assets/headerLogo.png' alt="logo">
@@ -42,7 +42,7 @@
       </div>
       <div class="links">
         <h2>Snabb länkar</h2>
-        <router-link to="/">Hem</router-link>
+        <router-link to="/" @click="scrollToTop('top')">hem</router-link>
         <router-link to="/about">Om mig</router-link>
         <router-link to="/projects">Projekt</router-link>
         <router-link to="/contact">Kontakt</router-link>
@@ -63,6 +63,12 @@ export default {
     return {
       mobileMenu: false,
     }
+  },
+  methods: {
+    scrollToTop(refname) {
+      const el = this.$refs[refname]
+      el.scrollIntoView({behavior: 'smooth'})
+    },
   }
 }
 </script>
