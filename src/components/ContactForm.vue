@@ -1,5 +1,5 @@
 <template>
-
+    
     <div v-if="emailSent" class="email-notice">
         <h1>Tack för ditt mail!</h1>
         <h3>Jag återkommer så fort jag kan!</h3>
